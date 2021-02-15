@@ -13,7 +13,7 @@ Description: In Switzerland, the landscape of municipalities is changing rapidly
   to municipalities of a new state. This functionality is helpful when working 
   with datasets that are based on different spatial references. The spatial 
   reference in this context signifies a set of municipalities at a given point in time.
-Imports: dplyr, XML, tibble, curl
+Imports: dplyr, XML, tibble, curl, rvest, xml2
 Suggests: testthat, roxygen2, knitr, rmarkdown
 VignetteBuilder: knitr
 License: GPL-3
