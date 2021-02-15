@@ -1,0 +1,22 @@
+Package: SMMT
+Title: The Swiss Municipal Data Merger Tool Maps Municipalities Over Time
+Version: 1.0.5
+Authors@R: 
+    person(given = "Valentin",
+           family = "Knechtl",
+           role = c("aut", "cre"),
+           email = "valentin.knechtl@unibas.ch",
+           comment = c(ORCID = "0000-0002-8545-8883"))
+Description: In Switzerland, the landscape of municipalities is changing rapidly
+  mainly due to mergers. The Swiss Municipal Data Merger Tool 
+  automatically detects these mutations and maps municipalities over time, i.e. municipalities of an old state
+  to municipalities of a new state. This functionality is helpful when working 
+  with datasets that are based on different spatial references. The spatial 
+  reference in this context signifies a set of municipalities at a given point in time.
+Imports: dplyr, XML, tibble, curl
+Suggests: testthat, roxygen2, knitr, rmarkdown
+VignetteBuilder: knitr
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
