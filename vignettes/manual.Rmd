@@ -1,7 +1,6 @@
 ---
 title: "Swiss Municipal Data Merger Tool: Manual"
-author: "Valentin Knechtl"
-date: "`r Sys.Date()`"
+date: "`r format(Sys.Date(), '%d.%m.%Y')`"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Swiss Municipal Data Merger Tool: Manual}
@@ -22,14 +21,23 @@ library(SMMT)
 ## Introduction
 
 In Switzerland, the landscape of municipalities is changing rapidly mainly due to mergers. The Swiss Municipality Merger Tool (SMMT) automatically detects these mutations and maps municipalities of an old state to municipalities of a new state. The aim of this vignette is to illustrate how to use the functionality of the SMMT.
+
+This figure shows the decrease in municipalities over time:
 <center>
 ![](municipality_count.png)
 </center>
+
+This figure shows the mutations for the decade 2010-2019:
+<center>
+![](bfs_atlas_mutationen.jpg)
+</center>
+Source: https://www.atlas.bfs.admin.ch/
+
 ## How To
 
 ### Setup
 
-1) Download & unpack the Swiss municipality inventory from the Federal Statistical Office website (https://www.bfs.admin.ch/bfsstatic/dam/assets/11467405/master).
+1) Download & unpack the Swiss municipality inventory from the Federal Statistical Office website.
 
 ```{r, eval=FALSE}
 path_inventory_xml <- download_municipality_inventory(path = getwd())
