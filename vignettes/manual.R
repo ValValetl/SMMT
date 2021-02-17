@@ -20,8 +20,8 @@ library(SMMT)
 #  mutations        <- mutations_object$mutations
 
 ## -----------------------------------------------------------------------------
-old_state <- as.POSIXct("1961-01-01")
-new_state <- as.POSIXct("1963-01-01")
+old_state <- as.Date("1961-01-01")
+new_state <- as.Date("1963-01-01")
 
 ## ---- echo = FALSE------------------------------------------------------------
 mutations <- structure(list(hist_id = c(11227L, 11240L, 13189L),
@@ -31,14 +31,11 @@ bfs_nr = c(4025L, 4021L, 4021L),
 name = c("Daettwil", "Baden", "Baden"),
 admission_nr = c(1000L, 1000L, 1004L),
 admission_mode = c(20L, 20L, 26L),
-admission_date = structure(c(-315619200, -315619200, -252460800),
-class = c("POSIXct", "POSIXt"), tzone = ""),
+admission_date = structure(c(-3653, -3653, -2922), class = c("Date")),
 abolition_nr = c(1004L, 1004L, NA),
 abolition_mode = c(29L, 26L, NA),
-abolition_date = structure(c(-252547200, -252547200, NA),
-class = c("POSIXct", "POSIXt"), tzone = ""),
-change_date = structure(c(-252547200,
--252547200, -252460800), class = c("POSIXct", "POSIXt"), tzone = "")),
+abolition_date = structure(c(-2923, -2923, NA), class = c("Date")),
+change_date = structure(c(-2923, -2923, -2922), class = c("Date"))),
 row.names = c(NA, -3L), class = c("tbl_df", "tbl", "data.frame"))
 
 ## -----------------------------------------------------------------------------

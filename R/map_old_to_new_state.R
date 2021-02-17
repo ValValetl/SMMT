@@ -15,17 +15,17 @@
 #' \strong{Example Daettwil / Baden}
 #'
 #' On 1.1.1962 Daettwil (Bfs Nr. 4025) merged with Baden (Bfs Nr. 4021). 
-#' Let's define \itemize{ \item old_state <- as.POSIXct("1961-01-01") \item
-#' new_state <- as.POSIXct("1963-01-01") \item Result: \tabular{rrrrrr}{
+#' Let's define \itemize{ \item old_state <- as.Date("1961-01-01") \item
+#' new_state <- as.Date("1963-01-01") \item Result: \tabular{rrrrrr}{
 #' bfs_nr_new \tab name_new \tab bfs_nr_old \tab name_old \cr 4021 \tab Baden \tab 4021 \tab Baden \cr 4021 \tab Baden \tab
 #' 4025 \tab Daettwil } }
 #'
 #'
 #' @param mutations A tibble containing the municipality mutations inventory (see
 #'   \code{\link{import_CH_municipality_inventory}})
-#' @param state_old A \link{POSIXct} object vector of length one containing the date of
+#' @param state_old A \link{Date} object vector of length one containing the date of
 #'   the old state.
-#' @param state_new A \link{POSIXct} object vector of length one containing the date of
+#' @param state_new A \link{Date} object vector of length one containing the date of
 #'   the new state.
 #'
 #' @return A list with 4 elements:
@@ -45,18 +45,17 @@
 #' name = c("Daettwil", "Baden", "Baden"),
 #' admission_nr = c(1000L, 1000L, 1004L),
 #' admission_mode = c(20L, 20L, 26L),
-#' admission_date = structure(c(-315619200, -315619200, -252460800),
-#' class = c("POSIXct", "POSIXt"), tzone = ""),
+#' admission_date = structure(c(-3653, -3653, -2922),
+#' class = c("Date"))
 #' abolition_nr = c(1004L, 1004L, NA),
 #' abolition_mode = c(29L, 26L, NA),
-#' abolition_date = structure(c(-252547200, -252547200, NA),
-#' class = c("POSIXct", "POSIXt"), tzone = ""),
-#' change_date = structure(c(-252547200,
-#' -252547200, -252460800), class = c("POSIXct", "POSIXt"), tzone = "")),
+#' abolition_date = structure(c(-3653, -3653, NA),
+#' class = c("Date")),
+#' change_date = structure(c(-3653, -3653, -2922), class = c("Date")),
 #' row.names = c(NA, -3L), class = c("tbl_df", "tbl", "data.frame"))
 #'
 #' mapping_object <- map_old_to_new_state(mutations,
-#' as.POSIXct("1961-01-01"), as.POSIXct("1963-01-01"))
+#' as.Date("1961-01-01"), as.Date("1963-01-01"))
 #'
 #' @export
 #' 

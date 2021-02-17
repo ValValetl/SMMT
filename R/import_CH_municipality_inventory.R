@@ -16,10 +16,6 @@
 #' \href{https://www.bfs.admin.ch/bfs/de/home/grundlagen/agvch/historisiertes-gemeindeverzeichnis.assetdetail.11467405.html}{Historisiertes
 #' Gemeindeverzeichnis}
 #'
-#' Direct download link:
-#' \href{https://www.bfs.admin.ch/bfsstatic/dam/assets/11467405/master}{Download
-#' XML}
-#'
 #' @param file_path Character vector of length one. It contains the file path to
 #'   the Swiss municipality inventory XML file.
 #'
@@ -46,7 +42,7 @@ import_CH_municipality_inventory <- function(file_path) {
   mutations_cantons$cantonId            <- as.integer(as.character(mutations_cantons$cantonId))
   mutations_cantons$cantonAbbreviation  <- as.character(mutations_cantons$cantonAbbreviation)
   mutations_cantons$cantonLongName      <- as.character(mutations_cantons$cantonLongName)
-  mutations_cantons$cantonDateOfChange  <- as.POSIXct(as.character(mutations_cantons$cantonDateOfChange))
+  mutations_cantons$cantonDateOfChange  <- as.Date(as.character(mutations_cantons$cantonDateOfChange))
   
   mutations <- rename(mutations_cantons,
                       kanton_abbr = cantonAbbreviation,
@@ -83,11 +79,11 @@ import_CH_municipality_inventory <- function(file_path) {
   mutations$municipalityStatus          <- as.integer(as.character(mutations$municipalityStatus))
   mutations$municipalityAdmissionNumber <- as.integer(as.character(mutations$municipalityAdmissionNumber))
   mutations$municipalityAdmissionMode   <- as.integer(as.character(mutations$municipalityAdmissionMode))
-  mutations$municipalityAdmissionDate   <- as.POSIXct(as.character(mutations$municipalityAdmissionDate))
+  mutations$municipalityAdmissionDate   <- as.Date(as.character(mutations$municipalityAdmissionDate))
   mutations$municipalityAbolitionNumber <- as.integer(as.character(mutations$municipalityAbolitionNumber))
   mutations$municipalityAbolitionMode   <- as.integer(as.character(mutations$municipalityAbolitionMode))
-  mutations$municipalityAbolitionDate   <- as.POSIXct(as.character(mutations$municipalityAbolitionDate))
-  mutations$municipalityDateOfChange    <- as.POSIXct(as.character(mutations$municipalityDateOfChange))
+  mutations$municipalityAbolitionDate   <- as.Date(as.character(mutations$municipalityAbolitionDate))
+  mutations$municipalityDateOfChange    <- as.Date(as.character(mutations$municipalityDateOfChange))
   
   
   # Modify and select columns -----------------------------------------------

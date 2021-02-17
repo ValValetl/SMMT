@@ -8,11 +8,11 @@ test_that("no mutations results in empty tibble", {
          name = c("Daettwil", "Baden", "Baden"),
          admission_nr = c(1000L, 1000L, 1004L), 
          admission_mode = c(20L, 20L, 26L), 
-         admission_date = structure(c(-315619200, -315619200, -252460800), class = c("POSIXct", "POSIXt"), tzone = ""), 
+         admission_date = structure(c(-3653, -3653, -2922), class = c("Date")), 
          abolition_nr = c(1004L, 1004L, NA),
          abolition_mode = c(29L, 26L, NA),
-         abolition_date = structure(c(-252547200, -252547200, NA), class = c("POSIXct", "POSIXt"), tzone = ""),
-         change_date = structure(c(-252547200, -252547200, -252460800), class = c("POSIXct", "POSIXt"), tzone = "")), 
+         abolition_date = structure(c(-2923, -2923, NA), class = c("Date")),
+         change_date = structure(c(-2923, -2923, -2922), class = c("Date"))), 
     row.names = c(NA, -3L), class = c("tbl_df", "tbl", "data.frame"))
   
   expected <- tibble(hist_id = integer(), 
@@ -22,11 +22,11 @@ test_that("no mutations results in empty tibble", {
                      name = character(),
                      admission_nr = integer(), 
                      admission_mode = integer(), 
-                     admission_date = structure(integer(), class = c("POSIXct", "POSIXt"), tzone = ""), 
+                     admission_date = structure(integer(), class = c("Date")), 
                      abolition_nr = integer(),
                      abolition_mode = integer(),
-                     abolition_date = structure(integer(), class = c("POSIXct", "POSIXt"), tzone = ""),
-                     change_date = structure(integer(), class = c("POSIXct", "POSIXt"), tzone = ""),
+                     abolition_date = structure(integer(), class = c("Date")),
+                     change_date = structure(integer(), class = c("Date")),
                      state = character(),
                      cause = character())
   
@@ -44,12 +44,12 @@ test_that("Irreversible mutation is detected", {
                               name = c("Arni-Islisberg", "Arni (AG)", "Islisberg"), 
                               admission_nr = c(1000L, 1481L, 1481L), 
                               admission_mode = c(20L, 21L, 21L), 
-                              admission_date = structure(c(-315619200, 410227200, 410227200), class = c("POSIXct", "POSIXt"), tzone = ""), 
+                              admission_date = structure(c(-3653,  4748,  4748), class = c("Date")), 
                               abolition_nr = c(1481L, NA, NA), 
                               abolition_mode = c(29L, NA, NA), 
-                              abolition_date = structure(c(410140800, NA, NA), class = c("POSIXct", "POSIXt"), tzone = ""), 
-                              change_date = structure(c(410140800, 410227200, 410227200), class = c("POSIXct", "POSIXt"), tzone = "")), 
-                         row.names = c(NA, -3L), class = c("tbl_df", "tbl", "data.frame"))
+                              abolition_date = structure(c(4747, NA, NA), class = c("Date")), 
+                              change_date = structure(c(4747, 4748, 4748), class = c("Date"))),
+                              row.names = c(NA, -3L), class = c("tbl_df", "tbl", "data.frame"))
   
   expected <- tibble(hist_id = c(11320L, 13668L, 13669L),
                      district_hist_id = c(10024L, 10024L, 10024L),
@@ -58,11 +58,11 @@ test_that("Irreversible mutation is detected", {
                      name = c("Arni-Islisberg", "Arni (AG)", "Islisberg"), 
                      admission_nr = c(1000L, 1481L, 1481L), 
                      admission_mode = c(20L, 21L, 21L), 
-                     admission_date = structure(c(-315619200, 410227200, 410227200), class = c("POSIXct", "POSIXt"), tzone = ""), 
+                     admission_date = structure(c(-3653,  4748,  4748), class = c("Date")), 
                      abolition_nr = c(1481L, NA, NA), 
                      abolition_mode = c(29L, NA, NA), 
-                     abolition_date = structure(c(410140800, NA, NA), class = c("POSIXct", "POSIXt"), tzone = ""), 
-                     change_date = structure(c(410140800, 410227200, 410227200), class = c("POSIXct", "POSIXt"), tzone = ""),
+                     abolition_date = structure(c(4747,   NA,   NA), class = c("Date")), 
+                     change_date = structure(c(4747, 4748, 4748), class = c("Date")),
                      change_nr = rep(1481L, 3),
                      state = c("abolition", "admission", "admission"),
                      cause = rep("Gemeindetrennung", 3))

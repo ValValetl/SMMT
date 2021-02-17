@@ -3,7 +3,7 @@
 #' Filter for existing municipalities at a specific point in time.
 #'
 #' @param tbl A tibble
-#' @param date A \code{POSIXct} object
+#' @param date A \code{Date} object of length one.
 #' 
 #' @return A tibble which is a subset of \code{tbl}
 #' 
