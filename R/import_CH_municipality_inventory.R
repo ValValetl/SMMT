@@ -43,7 +43,7 @@ import_CH_municipality_inventory <- function(file_path) {
   mutations_cantons$cantonDateOfChange  <- as.Date(as.character(mutations_cantons$cantonDateOfChange))
   
   mutations <- rename(mutations_cantons,
-                      kanton_abbr = cantonAbbreviation,
+                      canton = cantonAbbreviation,
                       change_date = cantonDateOfChange)
   
   
@@ -77,7 +77,7 @@ import_CH_municipality_inventory <- function(file_path) {
   mutations <- rename(mutations,
                       hist_id          = historyMunicipalityId,
                       district_hist_id = districtHistId,
-                      kanton_abbr      = cantonAbbreviation,
+                      canton           = cantonAbbreviation,
                       bfs_nr           = municipalityId,
                       name             = municipalityShortName,
                       entry_mode       = municipalityEntryMode,
