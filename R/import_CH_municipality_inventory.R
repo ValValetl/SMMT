@@ -29,15 +29,13 @@
 import_CH_municipality_inventory <- function(file_path) {
   
   # XML import --------------------------------------------------------------
-  xml_structure <- xmlToList(xmlParse(file_path))
+  xml_parsed <- xmlParse(file_path)
   
   # Process canton mutations object -----------------------------------------
   
-  mut_canton_list <- list()
-  for (ii in 1:length(xml_structure$cantons)) {
-    mut_canton_list[[ii]] <- as.data.frame(xml_structure$cantons[ii]$canton)
-  }
-  mutations_cantons <- as_tibble(do.call(rbind, mut_canton_list))
+  mutations_cantons <- xmlToDataFrame(nodes = getNodeSet(xml_parsed, "/eCH-0071:nomenclature/cantons/canton"))
+  mutations_cantons <- tibble::as_tibble(mutations_cantons)
+  
   
   mutations_cantons$cantonId            <- as.integer(as.character(mutations_cantons$cantonId))
   mutations_cantons$cantonAbbreviation  <- as.character(mutations_cantons$cantonAbbreviation)
@@ -50,21 +48,9 @@ import_CH_municipality_inventory <- function(file_path) {
   
   
   # Process municipality mutations object -----------------------------------
-
-  mut_munici_list <- list()
-  for (ii in 1:length(xml_structure$municipalities)) {
-    
-    mut_munici_list[[ii]] <- as.data.frame(xml_structure$municipalities[ii]$municipality)
-    
-    # If abolition attributes are missing, add them
-    if (ncol(mut_munici_list[[ii]]) == 12) {
-      mut_munici_list[[ii]]$municipalityAbolitionNumber <- NA
-      mut_munici_list[[ii]]$municipalityAbolitionMode   <- NA
-      mut_munici_list[[ii]]$municipalityAbolitionDate   <- NA
-    }
-  }
   
-  mutations <- as_tibble(do.call(rbind, mut_munici_list))
+  mutations <- xmlToDataFrame(nodes = getNodeSet(xml_parsed, "/eCH-0071:nomenclature/municipalities/municipality"))
+  mutations <- tibble::as_tibble(mutations)
   
 
   # Define column types -----------------------------------------------------
