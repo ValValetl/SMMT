@@ -30,4 +30,4 @@ utils::globalVariables(c("admission_date", "state", "status",
 "municipalityAdmissionDate", "municipalityAdmissionMode",
 "municipalityAdmissionNumber", "municipalityDateOfChange",
 "municipalityEntryMode", "municipalityId", "municipalityLongName",
-"municipalityShortName", "municipalityStatus", "name_new", "name_old", "is_xml"))
+"municipalityShortName", "municipalityStatus", "name_new", "name_old", "is_xml", "Name", "bfs_nr", "canton", "is_draft"))

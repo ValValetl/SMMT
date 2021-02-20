@@ -46,12 +46,12 @@
 #' admission_nr = c(1000L, 1000L, 1004L),
 #' admission_mode = c(20L, 20L, 26L),
 #' admission_date = structure(c(-3653, -3653, -2922),
-#' class = c("Date"))
+#' class = c("Date")),
 #' abolition_nr = c(1004L, 1004L, NA),
 #' abolition_mode = c(29L, 26L, NA),
 #' abolition_date = structure(c(-3653, -3653, NA),
 #' class = c("Date")),
-#' change_date = structure(c(-3653, -3653, -2922), class = c("Date")),
+#' change_date = structure(c(-3653, -3653, -2922), class = c("Date"))),
 #' row.names = c(NA, -3L), class = c("tbl_df", "tbl", "data.frame"))
 #'
 #' mapping_object <- map_old_to_new_state(mutations,

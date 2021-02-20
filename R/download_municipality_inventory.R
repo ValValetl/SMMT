@@ -4,6 +4,7 @@
 #' 
 #' @param url Character vector of length one. Link to the zip file containing the municipality inventory
 #' @param path Character vector of length one. Destination of extracted xml file.
+#' @param verbose Get a message after download about the content of the inventory.
 #' 
 #' @return Character vector of length one. File path to the extracted XML file.
 #' 
