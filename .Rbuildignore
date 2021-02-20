@@ -1,2 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+
+smmt.sublime-project
+smmt.sublime-workspace
+readme.md
