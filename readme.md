@@ -11,6 +11,6 @@ The Swiss Municipal Data Merger Tool automatically detects these mutations and m
 
 * For details, see https://cran.r-project.org/package=SMMT
 * For code examples, see https://cran.r-project.org/package=SMMT/vignettes/manual.html
-
+* For more details, see [this article](https://onlinelibrary.wiley.com/doi/full/10.1111/spsr.12487) in the Swiss Political Science Review.
 
 
