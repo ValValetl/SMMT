@@ -4,3 +4,8 @@ smmt.sublime-workspace
 .Rproj.user/
 *.Rproj
 .Rhistory
+
+docs/
+
+NAMESPACE
+vignettes/manual.html
