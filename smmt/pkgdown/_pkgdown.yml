@@ -1,0 +1,33 @@
+url: https://smmt.valentinknechtl.ch
+
+home:
+  title: Handle municipality mutations swiftly
+  links: 
+  - text: See source code
+    href: https://github.com/ValValetl/SMMT
+  - text: report a bug
+    href: https://github.com/ValValetl/SMMT/issues
+
+authors:
+  Valentin Knechtl:
+    href: https://github.com/ValValetl
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#0054AD"
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, news, github]
+
+footer:
+  structure: 
+    left: developed_by
+    right: bla
+  components:
+    bla: public money, public code.
+
+
