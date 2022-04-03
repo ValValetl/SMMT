@@ -5,3 +5,8 @@
 ^README\.Rmd$
 ^README-.*\.png$
 ^pkgdown$
+build_site.R
+smmt.sublime-project
+smmt.sublime-workspace
+news.md
+readme.md
