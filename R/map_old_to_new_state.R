@@ -49,9 +49,9 @@
 #' class = c("Date")),
 #' abolition_nr = c(1004L, 1004L, NA),
 #' abolition_mode = c(29L, 26L, NA),
-#' abolition_date = structure(c(-3653, -3653, NA),
+#' abolition_date = structure(c(-2923, -2923, NA),
 #' class = c("Date")),
-#' change_date = structure(c(-3653, -3653, -2922), class = c("Date"))),
+#' change_date = structure(c(-2923, -2923, -2922), class = c("Date"))),
 #' row.names = c(NA, -3L), class = c("tbl_df", "tbl", "data.frame"))
 #'
 #' mapping_object <- map_old_to_new_state(mutations,
