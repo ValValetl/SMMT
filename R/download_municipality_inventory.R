@@ -40,12 +40,9 @@ download_municipality_inventory <- function(url = get_current_url(),
   
   if (verbose) {
     mutations_object <- import_CH_municipality_inventory(file_path = xml_file_path)
-    mutations        <- mutations_object$mutations
-    
-    change_date_max <- max(mutations$change_date)
     
     message <- paste0("Municipal inventory successfully obtained. Most recent mutations enregistered: ", 
-                      format(change_date_max, "%d.%m.%Y"), ".")
+                      format(date_of_last_update(mutations_object$mutations), "%d.%m.%Y"), ".")
     
     message(message)
   }
