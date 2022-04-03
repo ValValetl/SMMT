@@ -103,4 +103,4 @@ If of relevance, use the information about municipalities which could not be map
 ## Further information
 
 * Details about the Swiss Municipality inventory (German: Historisiertes Gemeindeverzeichnis) at the Federal Statistical Office : https://www.bfs.admin.ch/bfs/de/home/grundlagen/agvch/historisiertes-gemeindeverzeichnis.html
-* Details about the defined standard: https://www.ech.ch/de/standards/47999
+* Details about the defined standard: https://www.ech.ch/de/standards/60121
