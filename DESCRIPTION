@@ -5,7 +5,7 @@ Authors@R:
     person(given = "Valentin",
            family = "Knechtl",
            role = c("aut", "cre"),
-           email = "valentin.knechtl@unibas.ch",
+           email = "valentinknechtl@gmail.com",
            comment = c(ORCID = "0000-0002-8545-8883"))
 Description: In Switzerland, the landscape of municipalities is changing rapidly
   mainly due to mergers. The Swiss Municipal Data Merger Tool 
