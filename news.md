@@ -3,6 +3,7 @@
 * Documentation improvements
 * pkgdown web documentation
 * add sprs article link
+* add mutation count function
 
 # SMMT 1.0.7
 
