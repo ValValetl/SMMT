@@ -1,0 +1,51 @@
+---
+title: "Mutation count"
+date: "`r format(Sys.Date(), '%d.%m.%Y')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Mutation count}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+library(SMMT)
+
+```
+
+Let's use the SMMT package and the municipality inventory data to analyse the number of mutations.
+
+By now, we know that municipalities change frequently in Switzerland. To get a better grasp, how often mutations occur, we can analyse the yearly frequency of these changes. 
+
+
+```{r code, eval=FALSE, include=TRUE}
+
+start_date <- seq.Date(as.Date("1960-01-01"), to = as.Date("2022-01-01"), by = "1 year")
+
+res <- mutation_count(mutations = mutations_object$mutations, 
+                      start_date, start_date + lubridate::years(1), 
+                      territorial_changes_only = FALSE)
+
+
+p <- ggplot(data = res, aes(start_date, number_of_mutations_in_period)) + geom_bar(stat = "identity")
+print(p)
+
+```
+
+
+This calculation also includes the administrative changes as well. Mutations that had a territorial effect can be calculated as follows:
+
+```{r code2, eval=FALSE, include=TRUE}
+
+res <- territorial_mutation_count(mutations = mutations_object$mutations, 
+                      start_date, start_date + lubridate::years(1))
+
+p <- ggplot(data = res, aes(start_date, number_of_mutations_in_period)) + geom_bar(stat = "identity")
+print(p)
+
+```
