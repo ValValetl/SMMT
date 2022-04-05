@@ -1,6 +1,6 @@
 Package: SMMT
 Title: The Swiss Municipal Data Merger Tool Maps Municipalities Over Time
-Version: 1.0.7.9000
+Version: 1.1.0
 Authors@R: 
     person(given = "Valentin",
            family = "Knechtl",

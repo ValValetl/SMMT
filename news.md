@@ -1,4 +1,4 @@
-# SMMT dev
+# SMMT 1.1.0
 
 * Documentation improvements
 * pkgdown web documentation
