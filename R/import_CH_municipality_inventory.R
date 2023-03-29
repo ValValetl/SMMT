@@ -28,6 +28,10 @@
 #' 
 import_CH_municipality_inventory <- function(file_path) {
   
+  if (!file.exists(file_path)) {
+    stop(paste0("The given path (file_path = ", file_path, ") is not a file path to an existing file. Change the input of argument \"file_path\" "))
+  }
+  
   # XML import --------------------------------------------------------------
   xml_parsed <- xmlParse(file_path)
   
