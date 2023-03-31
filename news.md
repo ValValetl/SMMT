@@ -1,3 +1,8 @@
+
+# SMMT 1.1.0.9000 development version
+
+* Updated downloand functionality.
+
 # SMMT 1.1.0
 
 * Documentation improvements
