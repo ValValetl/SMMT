@@ -47,6 +47,14 @@ download_municipality_inventory <- function(url = get_current_url(),
                       format(date_of_last_update(mutations_object$mutations), "%d.%m.%Y"), ".")
     
     message(message)
+    message("-----")
+    t_neue_gemeinden <- most_recent_changes(mutations = mutations_object$mutations)
+    t_neue_gemeinden <- t_neue_gemeinden %>% mutate(label = paste0(name, " (BfS Nr. ", bfs_nr, ", ",canton,")"))
+    label <- t_neue_gemeinden$label
+    
+    message("Neue Gemeinden: \n")
+    message(paste0(label, collapse = ", "))
+    
   }
   
   return(xml_file_path)
