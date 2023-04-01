@@ -11,7 +11,7 @@
 
 filter_date <- function(tbl, date) {
   
-  tbl <- filter(tbl, admission_date <= date & (abolition_date > date | is.na(abolition_date)))
+  tbl <- filter(tbl, admission_date <= date & (abolition_date >= date | is.na(abolition_date)))
   
   return(tbl)
 }
