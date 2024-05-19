@@ -7,6 +7,7 @@
 #'   (see \code{\link{import_CH_municipality_inventory}})
 #' @param dates A \link{Date} object vector
 #' @param geo_level Either "ch" or "cantons".
+#' @param include_cant_lakes Boolean, TRUE to also include lakes in the count.
 #'
 #' @return A tibble with the municipality count per date and specified
 #'   geography.
