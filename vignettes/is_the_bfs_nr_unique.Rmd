@@ -1,0 +1,35 @@
+---
+title: "Is the municipality BfS Nr. unique over time?"
+date: "`r format(Sys.Date(), '%d.%m.%Y')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Is the municipality BfS Nr. unique over time?}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+library(SMMT)
+
+```
+
+
+
+
+No.
+
+
+# Example
+
+The bfs_nr 3955 belongs to the municipalitiy Landquart (GR). Until October 1977, this bfs_nr 3955 was also in use but for different geographical entity, namely the "Gemeindefreies Gebiet Maienfeld-Fläsch".
+
+# Consequence 
+
+To join two datasets of two different time periods, one might think that the bfs_nr can be used to do the join. However, this is not possible because the bfs_nr can be reattributed over time. Thus, a simple bfs_nr based join is not possible. 
+
+
