@@ -2,6 +2,11 @@
 # SMMT 1.1.0.9000 development version
 
 * Updated downloand functionality.
+* Bugfix: Date selection filter selected wrong set of municipalities on last day before a new Gemeindestand.
+* Added filter functions
+* Update deprecated links
+* Fix missing PKGNAME-package \alias due to roxygen changes (https://github.com/r-lib/roxygen2/issues/1491)
+* 
 
 # SMMT 1.1.0
 
