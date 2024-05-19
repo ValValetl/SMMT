@@ -52,4 +52,4 @@ devtools::install_github("ValValetl/SMMT")
 
 ## Further documentation
 
-* [eCH-0071 Datenstandard Historisiertes Gemeindeverzeichnis der Schweiz](https://ech.ch/de/standards/60121): The Swiss municipal inventory is a well documented data standard which can be consulted at this webpage.
+* [eCH-0071 Datenstandard Historisiertes Gemeindeverzeichnis der Schweiz](https://ech.ch/de/ech/ech-0071/1.2.0): The Swiss municipal inventory is a well documented data standard which can be consulted at this webpage.

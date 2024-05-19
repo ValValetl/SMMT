@@ -38,20 +38,20 @@ devtools::install_github("ValValetl/SMMT")
 
 ## Get started
 
--   Read the vignette `vignette("manual")` /
-    [online](https://smmt.valentinknechtl.ch/articles/manual.html)
--   Look up the documentation of `?map_old_to_new_state`
+- Read the vignette `vignette("manual")` /
+  [online](https://smmt.valentinknechtl.ch/articles/manual.html)
+- Look up the documentation of `?map_old_to_new_state`
 
 ## Resources
 
--   SMMT on [CRAN](https://cran.r-project.org/package=SMMT)
--   For more background details, see [this
-    article](https://onlinelibrary.wiley.com/doi/full/10.1111/spsr.12487)
-    in the Swiss Political Science Review.
+- SMMT on [CRAN](https://cran.r-project.org/package=SMMT)
+- For more background details, see [this
+  article](https://onlinelibrary.wiley.com/doi/full/10.1111/spsr.12487)
+  in the Swiss Political Science Review.
 
 ## Further documentation
 
--   [eCH-0071 Datenstandard Historisiertes Gemeindeverzeichnis der
-    Schweiz](https://ech.ch/de/standards/60121): The Swiss municipal
-    inventory is a well documented data standard which can be consulted
-    at this webpage.
+- [eCH-0071 Datenstandard Historisiertes Gemeindeverzeichnis der
+  Schweiz](https://ech.ch/de/ech/ech-0071/1.2.0): The Swiss municipal
+  inventory is a well documented data standard which can be consulted at
+  this webpage.
